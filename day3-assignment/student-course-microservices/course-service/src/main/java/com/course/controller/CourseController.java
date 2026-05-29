@@ -1,4 +1,4 @@
-package com.department.controller;
+package com.course.controller;
 
 import com.course.dto.CourseDto;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,17 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/departments")
-public class DepartmentController {
+@RequestMapping("/courses")
+public class CourseController {
 
     @GetMapping("/{id}")
-    public DepartmentDto getDepartmentById(@PathVariable Long id) {
+    public CourseDto getCourseById(@PathVariable Long id) {
 
-        return new DepartmentDto(
-                101,
-                "Engineering",
-                "Bangalore",
-                "Amit"
+        return new CourseDto(
+                501,
+                "Java Microservices",
+                "Amit Sharma"
         );
     }
 }
